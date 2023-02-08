@@ -513,7 +513,7 @@
 				update_all_ability_checks();
 			});
 
-			on("change:initmod change:init_tiebreaker change:use_intelligent_initiative", function(eventinfo) {
+			on("change:initmod change:init_tiebreaker change:use_intellect_initiative", function(eventinfo) {
 				if (eventinfo.sourceType && eventinfo.sourceType === "sheetworker") {
 					return;
 				}
@@ -4159,7 +4159,7 @@
 			};
 
 			var update_initiative = function() {
-				var attrs_to_get = ["agility", "agility_mod", "intellect_mod", "initmod", "jack_of_all_trades", "jack", "init_tiebreaker", "pb_type", "use_intelligent_initiative"];
+				var attrs_to_get = ["agility", "agility_mod", "intellect_mod", "initmod", "jack_of_all_trades", "jack", "init_tiebreaker", "pb_type", "use_intellect_initiative"];
 				getSectionIDs("repeating_inventory", function(idarray) {
 					_.each(idarray, function(currentID, i) {
 						attrs_to_get.push("repeating_inventory_" + currentID + "_equipped");
@@ -4168,7 +4168,7 @@
 					getAttrs(attrs_to_get, function(v) {
 						var update = {};
 						var final_init = parseInt(v["agility_mod"], 10);
-						if (v["use_intelligent_initiative"] && v["use_intelligent_initiative"] != 0) {
+						if (v["use_intellect_initiative"] && v["use_intellect_initiative"] != 0) {
 							final_init = parseInt(v["intellect_mod"], 10);
 						}
 						if (v["initmod"] && !isNaN(parseInt(v["initmod"], 10))) {

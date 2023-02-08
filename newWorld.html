@@ -1094,7 +1094,7 @@
 				</div>
 			</div>
 			<div class="sheet-section-npc-footer">
-				<p>Matt's New World Character Sheet & Trackers</p>
+				<p>Matt's Super Cool New World Character Sheet & Trackers</p>
 				<p>(modified Giffyglyph's D&D 5e Character Sheet & Trackers)</p>
 			</div>
 		</div>
@@ -6821,7 +6821,7 @@
 									</div>
 								</div>
 								<div class="sheet-container-panel sheet-pc-option-gdd">
-									<div class="sheet-container-header">Matt's Modified Giffyglyph's Darker Dungeons</div>
+									<div class="sheet-container-header">Giffyglyph's Darker Dungeons Options</div>
 									<div class="sheet-container-body">
 										<div class="sheet-form sheet-form-borderless">
 											<div class="sheet-form-body">
@@ -6850,9 +6850,9 @@
 													</label>
 												</div>
 												<div class="sheet-form-group">
-													<label class="sheet-form-checkbox" title="@{use_intelligent_initiative}">
-														<input type="checkbox" name="attr_use_intelligent_initiative" value="0">
-														<span>Use Intelligence for Initiative</span>
+													<label class="sheet-form-checkbox" title="@{use_intellect_initiative}">
+														<input type="checkbox" name="attr_use_intellect_initiative" value="0">
+														<span>Use Intellect for Initiative</span>
 													</label>
 												</div>
 												<div class="sheet-form-group">
@@ -7413,7 +7413,7 @@
 			<input type='hidden' name='attr_show_stress_flag' value='0'>
 			<input type='hidden' name='attr_show_survival_conditions' value='0'>
 			<input type='hidden' name='attr_use_inventory_slots' value='0'>
-			<input type='hidden' name='attr_use_intelligent_initiative' value='0'>
+			<input type='hidden' name='attr_use_intellect_initiative' value='0'>
 			<!-- COMPENDIUM DROP CATCHERS -->
 			<input type="hidden" name="attr_drop_category" accept="Category">
 			<input type="hidden" name="attr_drop_name" accept="Name">
@@ -8866,7 +8866,7 @@
 					update_all_ability_checks();
 				});
 	
-				on("change:initmod change:init_tiebreaker change:use_intelligent_initiative", function(eventinfo) {
+				on("change:initmod change:init_tiebreaker change:use_intellect_initiative", function(eventinfo) {
 					if (eventinfo.sourceType && eventinfo.sourceType === "sheetworker") {
 						return;
 					}
@@ -12512,7 +12512,7 @@
 				};
 	
 				var update_initiative = function() {
-					var attrs_to_get = ["agility", "agility_mod", "intellect_mod", "initmod", "jack_of_all_trades", "jack", "init_tiebreaker", "pb_type", "use_intelligent_initiative"];
+					var attrs_to_get = ["agility", "agility_mod", "intellect_mod", "initmod", "jack_of_all_trades", "jack", "init_tiebreaker", "pb_type", "use_intellect_initiative"];
 					getSectionIDs("repeating_inventory", function(idarray) {
 						_.each(idarray, function(currentID, i) {
 							attrs_to_get.push("repeating_inventory_" + currentID + "_equipped");
@@ -12521,7 +12521,7 @@
 						getAttrs(attrs_to_get, function(v) {
 							var update = {};
 							var final_init = parseInt(v["agility_mod"], 10);
-							if (v["use_intelligent_initiative"] && v["use_intelligent_initiative"] != 0) {
+							if (v["use_intellect_initiative"] && v["use_intellect_initiative"] != 0) {
 								final_init = parseInt(v["intellect_mod"], 10);
 							}
 							if (v["initmod"] && !isNaN(parseInt(v["initmod"], 10))) {
