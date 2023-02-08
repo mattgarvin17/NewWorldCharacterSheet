@@ -1,7 +1,7 @@
 {
-    "html": "New World.html",
-    "css": "New World.css",
-    "authors": "Matt",
+    "html": "newWorld.html",
+    "css": "newWorld.css",
+    "authors": "Matt Gray",
     "roll20userid": "unknown",
     "preview": "",
     "compendium": "dnd5e",
@@ -306,8 +306,8 @@
         "attribute": "intelligent_initiative",
         "displayname": "Use Intelligence for Initiative",
         "type": "checkbox",
-        "value": "1",
-        "checked": "checked",
+        "value": "0",
+        "checked": "unchecked",
         "description": "[Giffyglyph's Darker Dungeons] Use your intelligence modifier (instead of your dexterity modifier) to calculate your initiative bonus."
       }
     ],

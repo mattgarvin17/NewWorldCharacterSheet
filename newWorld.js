@@ -531,11 +531,11 @@
 				update_challenge();
 			});
 
-			on("change:npc_str_save_base change:npc_dex_save_base change:npc_con_save_base change:npc_int_save_base change:npc_wis_save_base change:npc_cha_save_base", function(eventinfo) {
+			on("change:npc_mig_save_base change:npc_agi_save_base change:npc_res_save_base change:npc_int_save_base change:npc_foc_save_base change:npc_cha_save_base change:npc_dev_save_base change:npc_for_save_base", function(eventinfo) {
 				update_npc_saves();
 			});
 
-			on("change:npc_acrobatics_base change:npc_animal_handling_base change:npc_arcana_base change:npc_athletics_base change:npc_deception_base change:npc_history_base change:npc_insight_base change:npc_intimidation_base change:npc_investigation_base change:npc_medicine_base change:npc_nature_base change:npc_perception_base change:npc_performance_base change:npc_persuasion_base change:npc_religion_base change:npc_sleight_of_hand_base change:npc_stealth_base change:npc_survival_base", function(eventinfo) {
+			on("change:npc_acrobatics_base change:npc_adamance_base change:npc_arcana_base change:npc_athletics_base change:npc_civics_base change:npc_culture_base change:npc_deception_base change:npc_deduction_base change:npc_domestication_base change:npc_endurance_base change:npc_exploration_base change:npc_grip_base change:npc_history_base change:npc_insight_base change:npc_intimidation_base change:npc_legerdemain_base change:npc_mathematics_base change:npc_medicine_base change:npc_nature_base change:npc_perception_base change:npc_performance_base change:npc_persuasion_base change:npc_religion_base change:npc_science_base change:npc_stealth_base change:npc_technology_base change:npc_tolerance_base change:npc_vice_base change:npc_warfare_base", function(eventinfo) {
 				update_npc_skills();
 			});
 

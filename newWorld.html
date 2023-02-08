@@ -6827,37 +6827,37 @@
 											<div class="sheet-form-body">
 												<div class="sheet-form-group">
 													<label class="sheet-form-checkbox" title="@{show_death_failures_flag}">
-														<input type="checkbox" name="attr_show_death_failures_flag" value="1" checked="checked">
+														<input type="checkbox" name="attr_show_death_failures_flag" value="0">
 														<span>Show Death Save Failures Only</span>
 													</label>
 												</div>
 												<div class="sheet-form-group">
 													<label class="sheet-form-checkbox" title="@{show_exhaustion_flag}">
-														<input type="checkbox" name="attr_show_exhaustion_flag" value="1" checked="checked">
+														<input type="checkbox" name="attr_show_exhaustion_flag" value="0">
 														<span>Show Exhaustion Table</span>
 													</label>
 												</div>
 												<div class="sheet-form-group">
 													<label class="sheet-form-checkbox" title="@{show_stress_flag}">
-														<input type="checkbox" name="attr_show_stress_flag" value="1" checked="checked">
+														<input type="checkbox" name="attr_show_stress_flag" value="0">
 														<span>Show Stress & Afflictions</span>
 													</label>
 												</div>
 												<div class="sheet-form-group">
 													<label class="sheet-form-checkbox" title="@{show_survival_conditions}">
-														<input type="checkbox" name="attr_show_survival_conditions" value="1" checked="checked">
+														<input type="checkbox" name="attr_show_survival_conditions" value="0">
 														<span>Show Survival Conditions</span>
 													</label>
 												</div>
 												<div class="sheet-form-group">
 													<label class="sheet-form-checkbox" title="@{use_intelligent_initiative}">
-														<input type="checkbox" name="attr_use_intelligent_initiative" value="1" checked="checked">
+														<input type="checkbox" name="attr_use_intelligent_initiative" value="0">
 														<span>Use Intelligence for Initiative</span>
 													</label>
 												</div>
 												<div class="sheet-form-group">
 													<label class="sheet-form-checkbox" title="@{use_inventory_slots}">
-														<input type="checkbox" name="attr_use_inventory_slots" value="1" checked="checked">
+														<input type="checkbox" name="attr_use_inventory_slots" value="0">
 														<span>Use Inventory Slots</span>
 													</label>
 												</div>
@@ -7408,12 +7408,12 @@
 			<input type='hidden' name='attr_lvl7_slots_total' value='0'>
 			<input type='hidden' name='attr_lvl8_slots_total' value='0'>
 			<input type='hidden' name='attr_lvl9_slots_total' value='0'>
-			<input type='hidden' name='attr_show_death_failures_flag' value='1'>
-			<input type='hidden' name='attr_show_exhaustion_flag' value='1'>
-			<input type='hidden' name='attr_show_stress_flag' value='1'>
-			<input type='hidden' name='attr_show_survival_conditions' value='1'>
-			<input type='hidden' name='attr_use_inventory_slots' value='1'>
-			<input type='hidden' name='attr_use_intelligent_initiative' value='1'>
+			<input type='hidden' name='attr_show_death_failures_flag' value='0'>
+			<input type='hidden' name='attr_show_exhaustion_flag' value='0'>
+			<input type='hidden' name='attr_show_stress_flag' value='0'>
+			<input type='hidden' name='attr_show_survival_conditions' value='0'>
+			<input type='hidden' name='attr_use_inventory_slots' value='0'>
+			<input type='hidden' name='attr_use_intelligent_initiative' value='0'>
 			<!-- COMPENDIUM DROP CATCHERS -->
 			<input type="hidden" name="attr_drop_category" accept="Category">
 			<input type="hidden" name="attr_drop_name" accept="Name">
@@ -8884,11 +8884,11 @@
 					update_challenge();
 				});
 	
-				on("change:npc_str_save_base change:npc_dex_save_base change:npc_con_save_base change:npc_int_save_base change:npc_wis_save_base change:npc_cha_save_base", function(eventinfo) {
+				on("change:npc_mig_save_base change:npc_agi_save_base change:npc_res_save_base change:npc_int_save_base change:npc_foc_save_base change:npc_cha_save_base change:npc_dev_save_base change:npc_for_save_base", function(eventinfo) {
 					update_npc_saves();
 				});
 	
-				on("change:npc_acrobatics_base change:npc_animal_handling_base change:npc_arcana_base change:npc_athletics_base change:npc_deception_base change:npc_history_base change:npc_insight_base change:npc_intimidation_base change:npc_investigation_base change:npc_medicine_base change:npc_nature_base change:npc_perception_base change:npc_performance_base change:npc_persuasion_base change:npc_religion_base change:npc_sleight_of_hand_base change:npc_stealth_base change:npc_survival_base", function(eventinfo) {
+				on("change:npc_acrobatics_base change:npc_adamance_base change:npc_arcana_base change:npc_athletics_base change:npc_civics_base change:npc_culture_base change:npc_deception_base change:npc_deduction_base change:npc_domestication_base change:npc_endurance_base change:npc_exploration_base change:npc_grip_base change:npc_history_base change:npc_insight_base change:npc_intimidation_base change:npc_legerdemain_base change:npc_mathematics_base change:npc_medicine_base change:npc_nature_base change:npc_perception_base change:npc_performance_base change:npc_persuasion_base change:npc_religion_base change:npc_science_base change:npc_stealth_base change:npc_technology_base change:npc_tolerance_base change:npc_vice_base change:npc_warfare_base", function(eventinfo) {
 					update_npc_skills();
 				});
 	
